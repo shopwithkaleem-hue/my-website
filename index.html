@@ -1,76 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meri Pehli Website</title>
-  <style>
-    body { 
-      background: linear-gradient(135deg, #667eea
-      0%, #411969 100%); 
-      min-height: 100vh;
-      color: rgba(58, 8, 8, 0.596); 
-      text-align: center; 
-      font-family: sans-serif;
-      padding-top: 100px;
-    }
-    h1 { color: #050a20; }
-    h2 { color: rgb(15, 3, 3); }
-    li {color: rgb(26, 6, 20); }
-    button {
-        background: lightcoral;
-        color: white;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 10px;
-        font-size: 18px;
-        cursor: pointer;
-          }
-  #myPhoto {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #ff7bac;
-    box-shadow: 0 0 20px rgba(255, 123, 172, 0.6);
-    cursor: pointer;
-    transition: 0.3s;
-    object-fit: cover;
-  }
-  #myPhoto:hover {
-    transform: scale(1.1);
-  }
-  #myPhoto.bari {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-  }
-    }
-  </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meri Pehli Website</title>
+<style>
+body { 
+  margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center; 
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+  font-family: sans-serif; color:white; text-align:center; padding:20px;
+}
+.card { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding:40px 30px; border-radius:25px; max-width:400px; width:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+img { width:120px; height:120px; border-radius:50%; border:4px solid white; object-fit:cover; box-shadow: 0 0 20px #ff6a88; }
+h1 { font-size:20px; margin-top:25px; }
+.btn { display:block; margin:12px auto; padding:14px; border-radius:50px; text-decoration:none; font-weight:bold; max-width:280px; transition:0.3s; }
+.btn:hover { transform: scale(1.05); }
+.tiktok { background: black; color:white; }
+.whatsapp { background: #25D366; color:white; }
+.click { background: #ff6a88; color:white; max-width:120px; font-size:14px;}
+</style>
 </head>
 <body>
+<div class="card">
   <h1>mai hun kaleem ullah aur ye meri pehli website hai</h1>
-<img id="myPhoto" src="kaleem.pnj.jpeg" onclick="bariKaro()" title="Click karo bara karne ke liye">
-  <p>Ab me developer ban gaya hu.</p>
-  <h2>Meri skills</h2>
-  <ul>
-     <li>HTML seekh liya</li>
-     <li>Ab CSS Seekh Raha hun</li>
-     </ul>
-   <a href="https://www.tiktok.com/@uskcxnzz" target="_blank" style="display:block; margin-top:20px; background:black; color:white; padding:15px; border-radius:12px; text-align:center; text-decoration:none; font-weight:bold; font-size:18px;">My TikTok - @uskcxnzz 🖤</a>
-  My TikTok - @uskcxnzz
-  <a href="https://wa.me/923195591280" target="_blank" style="display:block; margin-top:12px; background:#25D366; color:white; padding:15px; border-radius:12px; text-align:center; text-decoration:none; font-weight:bold; font-size:18px;">WhatsApp Pe Message Karo 💬</a>
-</a>
-<br><br>
-  <button>Click Me</button>  <script>
-    document.querySelector("button").onclick = function(){
-      alert("ye sab maine khud kia!");
-    }
-  </script>
-  <script>
-function bariKaro() {
-  document.getElementById("myPhoto").classList.toggle("bari");
-}
-document.querySelector("button").onclick = function(){
-  alert("ye sab maine khud kia!");
-}
-</script>
+  <img src="kaleem.pnj.jpeg" alt="Kaleem">
+  <p style="font-size:14px; opacity:0.9;">Ab me developer ban gaya hu</p>
+  <h3 style="margin:15px 0 5px 0;">Meri skillss</h3>
+  <p style="font-size:13px; opacity:0.8; margin:0;">HTML seekh liya<br>Ab CSS Seekh Raha hun</p>
+  
+  <a href="https://www.tiktok.com/@uskcxnzz" target="_blank" class="btn tiktok">My TikTok - @uskcxnzz 🖤</a>
+  <a href="https://wa.me/923195591280" target="_blank" class="btn whatsapp">WhatsApp Pe Message Karo 💬</a>
+  <a href="#" class="btn click" onclick="alert('MashAllah Kaleem bhai developer ban gaya!')">Click Me</a>
+</div>
 </body>
 </html>
